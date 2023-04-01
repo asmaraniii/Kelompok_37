@@ -64,7 +64,11 @@ int main() {
   int nomor;
   bool exit = false;
 
-  cout << "Selamat datang di Koperasi Simpan Pinjam." << endl;
+  cout << "_____________________________________________________________________" << endl;
+  cout << "                                                                     " << endl;
+  cout << "==========================Selamat datang di==========================" << endl;
+  cout << "===================Koperasi Simpan Pinjam siBusett===================" << endl;
+  cout << "_____________________________________________________________________" << endl;
 
   cout << "Masukkan nama Anda: ";
   cin >> nama;
