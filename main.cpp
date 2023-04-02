@@ -131,7 +131,18 @@ int main() {
     cin >> jumlah;
     anggota.lunasPinjaman(jumlah);
     break;
-
+        
+  case 5:
+       // tambah bunga
+       cout << "Persentase bunga yang ingin ditambahkan: ";
+       cin >> persen;
+       anggota.tambahBunga(persen);
+       break;
+        
+    case 6:
+        // hitung bunga
+        anggota.hitungBunga();
+        break;
   case 7:
     exit = true;
     break;
