@@ -65,7 +65,12 @@ class Koperasi {
       cout << "Persentase bunga saat ini: " << persen << "%" << endl;
     }
     
-    
+    void hitungBunga() {
+      int bungaSimpanan = simpanan * bunga;
+      simpanan += bungaSimpanan;
+      cout << "Bunga berhasil dihitung." << endl;
+      cout << "Simpanan saat ini: " << simpanan << endl;
+    }
 };
 
 int main() {
