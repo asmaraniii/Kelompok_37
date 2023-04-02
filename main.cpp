@@ -7,6 +7,7 @@ class Koperasi {
     int nomorAnggota;
     int simpanan;
     int pinjaman;
+    float bunga;
 
   public:
     Koperasi(string name, int num) {
@@ -14,6 +15,7 @@ class Koperasi {
       nomorAnggota = num;
       simpanan = 0;
       pinjaman = 0;
+      bunga = 0.0;
     }
 
     void showData() {
@@ -56,11 +58,20 @@ class Koperasi {
         cout << "Pinjaman saat ini: " << pinjaman << endl;
       }
     }
+    
+    void tambahBunga(float persen) {
+      bunga = persen / 100;
+      cout << "Bunga berhasil ditambahkan." << endl;
+      cout << "Persentase bunga saat ini: " << persen << "%" << endl;
+    }
+    
+    
 };
 
 int main() {
   int pilihan, jumlah;
   string nama;
+  float persen;
   int nomor;
   bool exit = false;
 
@@ -80,11 +91,15 @@ int main() {
 
   while (!exit) {
     cout << endl << "Pilihan Menu:" << endl;
-    cout << "1. Lihat Data Anggota" << endl;
-    cout << "2. Simpan Uang" << endl;
-    cout << "3. Pinjam Uang" << endl;
-    cout << "4. Lunasi Pinjaman" << endl;
-    cout << "5. Keluar" << endl;
+    cout << "-------------------------------------------------------------------" << endl;
+    cout << "|      1. Lihat Data Anggota                                      |" << endl;
+    cout << "|      2. Simpan Uang                                             |" << endl;
+    cout << "|      3. Pinjam Uang                                             |" << endl;
+    cout << "|      4. Lunasi Pinjaman                                         |" << endl;
+    cout << "|      5. Tambah bunga                                            |" << endl;
+    cout << "|      6. Hitung bunga                                            |" << endl;
+    cout << "|      7. Keluar                                                  |" << endl;
+    cout << "-------------------------------------------------------------------" << endl;
 
     cout << "Masukkan pilihan Anda (1-5): ";
     cin >> pilihan;
@@ -112,7 +127,7 @@ int main() {
     anggota.lunasPinjaman(jumlah);
     break;
 
-  case 5:
+  case 7:
     exit = true;
     break;
 
@@ -122,7 +137,7 @@ int main() {
 }
 }
 
-cout << "Terima kasih telah menggunakan layanan Koperasi Simpan Pinjam." << endl;
+cout << "Terima kasih telah menggunakan layanan Koperasi Simpan Pinjam siBusett." << endl;
 
 return 0;
 }
